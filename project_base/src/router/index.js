@@ -19,8 +19,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
-  base: "",
+  mode: "hash",
   routes,
 });
 

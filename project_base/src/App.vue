@@ -1,10 +1,15 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
+    <el-menu :router="true" mode="horizontal">
+      <!--基座中可以放自己的路由-->
+      <el-menu-item index="/">Home</el-menu-item>
+      <el-menu-item index="/about">About</el-menu-item>
+      <!--引用其他子应用-->
+      <el-menu-item index="/vue">vue应用</el-menu-item>
+    </el-menu>
+    <router-view></router-view>
+    <!-- 准备一个用于子应用存放的DOM节点 -->
+    <div id="vue"></div>
   </div>
 </template>
 

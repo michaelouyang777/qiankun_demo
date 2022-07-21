@@ -2,6 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 
+import './public-path' // 注意需要引入public-path
+
 let instance = null;
 function render() {
   instance = new Vue({
@@ -13,6 +15,7 @@ function render() {
 if (window.__POWERED_BY_QIANKUN__) { // 动态添加publicPath
   __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
 }
+
 if (!window.__POWERED_BY_QIANKUN__) { // 默认独立运行
   render();
 }
@@ -29,4 +32,6 @@ export async function mount(props) {
 
 export async function unmount(props) {
   instance.$destroy();
+  instance.$el.innerHTML = ''
+  instance = null
 }

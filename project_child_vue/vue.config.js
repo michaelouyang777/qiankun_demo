@@ -1,4 +1,6 @@
 const { defineConfig } = require("@vue/cli-service");
+const { name } = require('./package.json')
+
 module.exports = defineConfig({
   lintOnSave: false, // 关闭eslint检测
   transpileDependencies: true,
@@ -12,7 +14,7 @@ module.exports = defineConfig({
   configureWebpack: {
     output: {
       // 资源打包路径
-      library: 'vueApp',
+      library: `${name}-[name]`,
       libraryTarget: 'umd'
     }
   }

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/vue">Home_child</router-link> |
-      <router-link to="/vue/about">About_child</router-link>
+      <router-link to="/sub-vue">Home_child</router-link> |
+      <router-link to="/sub-vue/about">About_child</router-link>
     </nav>
     <router-view />
   </div>

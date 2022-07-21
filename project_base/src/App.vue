@@ -5,11 +5,11 @@
       <el-menu-item index="/">Home</el-menu-item>
       <el-menu-item index="/about">About</el-menu-item>
       <!--引用其他子应用-->
-      <el-menu-item index="/vue">vue应用</el-menu-item>
+      <el-menu-item index="/sub-vue">vue应用</el-menu-item>
     </el-menu>
     <router-view></router-view>
     <!-- 准备一个用于子应用存放的DOM节点 -->
-    <div id="vue"></div>
+    <div id="subapp-viewport"></div>
   </div>
 </template>
 
